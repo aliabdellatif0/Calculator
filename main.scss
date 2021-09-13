@@ -11,6 +11,7 @@
     position: relative;
     left: 200px;
     
+    
   }
   
   .grid-item {
@@ -28,4 +29,12 @@
       font-size: large;
       border-radius: 20px;
       border-color: black;
+  }
+
+  .output{
+      border: solid black;
+      padding: 20px;
+      width: 475px;
+      position: relative;
+      left: 200px
   }
