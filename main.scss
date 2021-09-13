@@ -38,3 +38,8 @@
       position: relative;
       left: 200px
   }
+
+  .grid-item-special{
+    grid-column: span 2;
+    
+  }
