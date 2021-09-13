@@ -1,6 +1,8 @@
 .heading{
     position: relative;
-    left: 150px
+    left: 150px;
+    font-family: Arial;
+    font-size: 30px;
 }
 .grid-container {
     display: grid;
@@ -36,10 +38,16 @@
       padding: 20px;
       width: 475px;
       position: relative;
-      left: 200px
+      left: 200px;
+      border-radius: 10px;
   }
 
   .grid-item-special{
     grid-column: span 2;
     
+  }
+
+  .special-button{
+      padding-left: 40px;
+      padding-right: 40px;
   }
