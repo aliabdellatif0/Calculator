@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="main.css">
+    
 </head>
 
 <body>
@@ -15,19 +16,18 @@
         </div>
     </header>
 
-    <div class ="output">
-        This will be the output
-    </div>
+   
 
     <div class="grid-container">
-        <div class="grid-item"><button>AC</button></div>
-        <div class="grid-item"><button>+/-</button></div>
-        <div class="grid-item"><button>%</button></div>
-        <div class="grid-item"><button>/</button></div>
-        <div class="grid-item"><button>7</button></div>
-        <div class="grid-item"><button>8</button></div>
-        <div class="grid-item"><button>9</button></div>
-        <div class="grid-item"><button>*</button></div>
+        <div class="grid-item display"></div>
+        <div class="grid-item"><button onclick="handleRegister()">AC</button></div>
+        <div class="grid-item"><button onclick="handleRegister()">+/-</button></div>
+        <div class="grid-item"><button onclick="handleRegister()">%</button></div>
+        <div class="grid-item"><button onclick="handleRegister()">/</button></div>
+        <div class="grid-item"><button onclick="addToScreen()">7</button></div>
+        <div class="grid-item"><button onclick="addToScreen()">8</button></div>
+        <div class="grid-item"><button onclick="handleRegister()">9</button></div>
+        <div class="grid-item"><button onclick="handleRegister()">*</button></div>
         <div class="grid-item"><button>4</button></div>
         <div class="grid-item"><button>5</button></div>
         <div class="grid-item"><button>6</button></div>
@@ -40,6 +40,8 @@
         <div class="grid-item"><button>.</button></div>
         <div class="grid-item"><button>=</button></div>
     </div>
+
+<script src = "./main.js"></script>
 
 
     
