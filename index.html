@@ -20,25 +20,25 @@
 
     <div class="grid-container">
         <div class="grid-item display"></div>
-        <div class="grid-item"><button onclick="handleRegister()">AC</button></div>
-        <div class="grid-item"><button onclick="handleRegister()">+/-</button></div>
-        <div class="grid-item"><button onclick="handleRegister()">%</button></div>
-        <div class="grid-item"><button onclick="handleRegister()">/</button></div>
-        <div class="grid-item"><button onclick="addToScreen()">7</button></div>
-        <div class="grid-item"><button onclick="addToScreen()">8</button></div>
-        <div class="grid-item"><button onclick="handleRegister()">9</button></div>
-        <div class="grid-item"><button onclick="handleRegister()">*</button></div>
-        <div class="grid-item"><button>4</button></div>
-        <div class="grid-item"><button>5</button></div>
-        <div class="grid-item"><button>6</button></div>
-        <div class="grid-item"><button>-</button></div>
-        <div class="grid-item"><button>1</button></div>
-        <div class="grid-item"><button>2</button></div>
-        <div class="grid-item"><button>3</button></div>
-        <div class="grid-item"><button>+</button></div>
-        <div class="grid-item grid-item-special"><button class = "special-button">0</button></div>
-        <div class="grid-item"><button>.</button></div>
-        <div class="grid-item"><button>=</button></div>
+        <div class="grid-item"><button onclick="addToScreen('')">AC</button></div>
+        <div class="grid-item"><button onclick="addToScreen('-')">+/-</button></div>
+        <div class="grid-item"><button onclick="addToScreen('%')">%</button></div>
+        <div class="grid-item"><button onclick="addToScreen('/')">/</button></div>
+        <div class="grid-item"><button onclick="addToScreen(7)">7</button></div>
+        <div class="grid-item"><button onclick="addToScreen(8)">8</button></div>
+        <div class="grid-item"><button onclick="addToScreen(9)">9</button></div>
+        <div class="grid-item"><button onclick="addToScreen('*')">*</button></div>
+        <div class="grid-item"><button onclick="addToScreen(4)">4</button></div>
+        <div class="grid-item"><button onclick="addToScreen(5)">5</button></div>
+        <div class="grid-item"><button onclick="addToScreen(6)">6</button></div>
+        <div class="grid-item"><button onclick="addToScreen('-')">-</button></div>
+        <div class="grid-item"><button onclick="addToScreen(1)">1</button></div>
+        <div class="grid-item"><button onclick="addToScreen(2)">2</button></div>
+        <div class="grid-item"><button onclick="addToScreen(3)">3</button></div>
+        <div class="grid-item"><button onclick="addToScreen('+')">+</button></div>
+        <div class="grid-item grid-item-special"><button class = "special-button" onclick="addToScreen(0)">0</button></div>
+        <div class="grid-item"><button onclick="addToScreen('.')">.</button></div>
+        <div class="grid-item"><button onclick="addToScreen('=')">=</button></div>
     </div>
 
 <script src = "./main.js"></script>
