@@ -28,21 +28,53 @@ const addToScreen = (number) => {
 const executioner = () => {
     const theDisplay = document.querySelector(".display")
     inTheDisplay = theDisplay.innerHTML
-    console.log(inTheDisplay)
     newLine = []
-    for (let i = 0; i<inTheDisplay.length; i++ ){
+    
+    for (let i = 1; i<inTheDisplay.length; i++ ){
         let x = inTheDisplay.charAt(i)
 
-        if(x== '0','1','2','3','4','5','6','7','8','9'){
-            newLine.push(parseInt(x))
-        }else if (x == '+', '-', '/', '*'){
-            newLine.push(x.replace(/^"(.+(?="$))"$/, '$1'))
-          } 
-
+        switch(x){
+            case '+' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) +
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+            case '-' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) -
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+            case '/' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) /
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+            case '*' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) *
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+        }
+        console.log(newLine)
 
         }
+        const showDisplay = document.querySelector(".display")
+    //add a class then remove the class in order to get the value
+    
+    if(isNaN(newLine[0])){
+        alert('Incorrect Input or Format')
+        showDisplay.innerHTML = ''
 
-    console.log(newLine)
+    }
+    else{
+        showDisplay.innerHTML = newLine[0]
+    }
+}
+
+
+const clearScreen = () => {
+    //if has operand class ignore function
+    const showDisplay = document.querySelector(".display")
+    //add a class then remove the class in order to get the value
+    
+    showDisplay.innerHTML = ''
+
 }
 
 
