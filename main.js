@@ -29,15 +29,26 @@ const executioner = () => {
     const theDisplay = document.querySelector(".display")
     inTheDisplay = theDisplay.innerHTML
     console.log(inTheDisplay)
-    newLine = 0
-    for (let i = 0; i<inTheDisplay; i++ ){
-        inTheDisplay.charAt(i)
-    }
+    newLine = []
+    for (let i = 0; i<inTheDisplay.length; i++ ){
+        let x = inTheDisplay.charAt(i)
 
+        if(x== '0','1','2','3','4','5','6','7','8','9'){
+            newLine.push(parseInt(x))
+        }else if (x == '+', '-', '/', '*'){
+            newLine.push(x.replace(/^"(.+(?="$))"$/, '$1'))
+          } 
+
+
+        }
+
+    console.log(newLine)
 }
 
-console.log(firstInput)
-console.log(secondInput)
+
+
+// console.log(firstInput)
+// console.log(secondInput)
 
 ///when press equal 
 //for loop parse evaluate each token
