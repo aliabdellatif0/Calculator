@@ -4,7 +4,7 @@ A calculator designed using HTML & SCSS, with JavaScript incorporated for its fu
 
 This calculator will take in basic inputs and perform operations on two separate numbers which will be treated as floats so YES you can use decimal points.
 
-Errors will be alerted on screen and the calculator shall reset if you input a mathematically invlaid line.
+Errors will be alerted on screen and the calculator shall reset if you input a mathematically invalid line.
 
 Some complex mathemtical lines may still return a value however they will be incorrect due to the nature of the code
 
