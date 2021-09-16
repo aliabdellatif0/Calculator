@@ -12,7 +12,17 @@ P.s. you can operate on the output provided to you as the answer on the display
 
 
 
-
 //Pseudocode below ->
 Approach buttons using a css grid layout 
+
 Buttons all laid out now; output bar at the top is done and a satisfactory colour scheme is included
+
+Approach solution by assinging two inputs separated by operator to a variable through function on buttons.
+
+Issue has arose given assinging of variables whereby tried to solve using boolean however too many bugs encountered
+
+Taken a simplistic approach with many uses to for loop until operator found. 
+
+split the string to before operator and after and use swith to go through what the operator was
+
+through switch perform your calculation
