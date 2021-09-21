@@ -11,6 +11,9 @@ Some complex mathemtical lines may still return a value however they will be inc
 P.s. you can operate on the output provided to you as the answer on the display
 
 
+//Testing ->
+
+In regards to testing a cypress approach was taken where by the test file is included within the repo and by running the command 'npx cypress open' you can proceed with running the tests.
 
 //Pseudocode below ->
 Approach buttons using a css grid layout 
