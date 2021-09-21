@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="main.css">
+    
 </head>
 
 <body>
@@ -15,31 +16,32 @@
         </div>
     </header>
 
-    <div class ="output">
-        This will be the output
-    </div>
+   
 
     <div class="grid-container">
-        <div class="grid-item"><button>AC</button></div>
-        <div class="grid-item"><button>+/-</button></div>
-        <div class="grid-item"><button>%</button></div>
-        <div class="grid-item"><button>/</button></div>
-        <div class="grid-item"><button>7</button></div>
-        <div class="grid-item"><button>8</button></div>
-        <div class="grid-item"><button>9</button></div>
-        <div class="grid-item"><button>*</button></div>
-        <div class="grid-item"><button>4</button></div>
-        <div class="grid-item"><button>5</button></div>
-        <div class="grid-item"><button>6</button></div>
-        <div class="grid-item"><button>-</button></div>
-        <div class="grid-item"><button>1</button></div>
-        <div class="grid-item"><button>2</button></div>
-        <div class="grid-item"><button>3</button></div>
-        <div class="grid-item"><button>+</button></div>
-        <div class="grid-item grid-item-special"><button class = "special-button">0</button></div>
-        <div class="grid-item"><button>.</button></div>
-        <div class="grid-item"><button>=</button></div>
+        <div class="grid-item display" data-cy="display"></div>
+        <div class="grid-item"><button onclick="clearScreen()">AC</button></div>
+        <div class="grid-item"><button onclick="addToScreen('-')">+/-</button></div>
+        <div class="grid-item"><button onclick="addToScreen('%')">%</button></div>
+        <div class="grid-item"><button onclick="addToScreen('/')" data-cy = "divide">/</button></div>
+        <div class="grid-item"><button onclick="addToScreen(7)" data-cy="seven">7</button></div>
+        <div class="grid-item"><button onclick="addToScreen(8)">8</button></div>
+        <div class="grid-item"><button onclick="addToScreen(9)">9</button></div>
+        <div class="grid-item"><button onclick="addToScreen('*')" data-cy ="multiply">*</button></div>
+        <div class="grid-item"><button onclick="addToScreen(4)">4</button></div>
+        <div class="grid-item"><button onclick="addToScreen(5)">5</button></div>
+        <div class="grid-item"><button onclick="addToScreen(6)">6</button></div>
+        <div class="grid-item"><button onclick="addToScreen('-')" data-cy="minus">-</button></div>
+        <div class="grid-item"><button onclick="addToScreen(1)">1</button></div>
+        <div class="grid-item"><button onclick="addToScreen(2)" data-cy="two">2</button></div>
+        <div class="grid-item"><button onclick="addToScreen(3)">3</button></div>
+        <div class="grid-item"><button onclick="addToScreen('+')" data-cy="plus">+</button></div>
+        <div class="grid-item grid-item-special"><button class = "special-button" onclick="addToScreen(0)">0</button></div>
+        <div class="grid-item"><button onclick="addToScreen('.')">.</button></div>
+        <div class="grid-item"><button onclick="executioner()" data-cy="equals">=</button></div>
     </div>
+
+<script src = "./main.js"></script>
 
 
     
