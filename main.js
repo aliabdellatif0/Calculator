@@ -1,73 +1,65 @@
-
-const numberButtons = document.querySelectorAll("button")
+const numberButtons = document.querySelectorAll("button");
 
 const handleButton = () => {
-    alert("clicked")
-}
+  alert("clicked");
+};
 
-const addToScreen = (number) => {
-    //if has operand class ignore function
-    const showDisplay = document.querySelector(".display")
-    //add a class then remove the class in order to get the value
-    
-    showDisplay.innerHTML += number
+const addToScreen = number => {
+  //if has operand class ignore function
+  const showDisplay = document.querySelector(".display");
+  //add a class then remove the class in order to get the value
 
-}
+  showDisplay.innerHTML += number;
+};
 const executioner = () => {
-    const theDisplay = document.querySelector(".display")
-    inTheDisplay = theDisplay.innerHTML
-    newLine = []
-    
-    for (let i = 1; i<inTheDisplay.length; i++ ){
-        let x = inTheDisplay.charAt(i)
+  const theDisplay = document.querySelector(".display");
+  inTheDisplay = theDisplay.innerHTML;
+  newLine = [];
 
-        switch(x){
-            case '+' :
-                newLine.push(parseFloat(inTheDisplay.substr(0,i)) +
-                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
-            break;
-            case '-' :
-                newLine.push(parseFloat(inTheDisplay.substr(0,i)) -
-                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
-            break;
-            case '/' :
-                newLine.push(parseFloat(inTheDisplay.substr(0,i)) /
-                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
-            break;
-            case '*' :
-                newLine.push(parseFloat(inTheDisplay.substr(0,i)) *
-                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
-            break;
-            case '%' :
-                newLine.push((parseFloat(inTheDisplay.substr(0,i)))/ 100)
-                
-            break;
-        }
-        console.log(newLine)
+  for (let i = 1; i < inTheDisplay.length; i++) {
+    let x = inTheDisplay.charAt(i);
+    console.log(x);
 
-        }
-        const showDisplay = document.querySelector(".display")
-    
-    
-    if(isNaN(newLine[0])){
-        alert('Incorrect Input or Format')
-        showDisplay.innerHTML = ''
+    switch (x) {
+      case "+":
+        newLine.push(
+          parseFloat(inTheDisplay.substr(0, i)) + parseFloat(inTheDisplay.substr(i + 1, inTheDisplay.length))
+        );
+        break;
+      case "-":
+        newLine.push(
+          parseFloat(inTheDisplay.substr(0, i)) - parseFloat(inTheDisplay.substr(i + 1, inTheDisplay.length))
+        );
+        break;
+      case "/":
+        newLine.push(
+          parseFloat(inTheDisplay.substr(0, i)) / parseFloat(inTheDisplay.substr(i + 1, inTheDisplay.length))
+        );
+        break;
+      case "*":
+        newLine.push(
+          parseFloat(inTheDisplay.substr(0, i)) * parseFloat(inTheDisplay.substr(i + 1, inTheDisplay.length))
+        );
+        break;
+      case "%":
+        newLine.push(parseFloat(inTheDisplay.substr(0, i)) / 100);
 
+        break;
     }
-    else{
-        showDisplay.innerHTML = newLine[0]
-    }
-}
+    console.log(newLine);
+  }
+  const showDisplay = document.querySelector(".display");
 
+  if (isNaN(newLine[0])) {
+    alert("Incorrect Input or Format");
+    showDisplay.innerHTML = "";
+  } else {
+    showDisplay.innerHTML = newLine[0];
+  }
+};
 
 const clearScreen = () => {
-    
-    const showDisplay = document.querySelector(".display")
-    
-    
-    showDisplay.innerHTML = ''
+  const showDisplay = document.querySelector(".display");
 
-}
-
-
-
+  showDisplay.innerHTML = "";
+};
